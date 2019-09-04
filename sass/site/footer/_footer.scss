@@ -1,0 +1,45 @@
+.nf-footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid $brand-light-gray;
+}
+.menu-follow-us-container{
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        width: 100%;
+        li{
+            flex: 1;
+            margin-right: 35px;
+            &:last-child{
+                margin-right: 0;
+            }
+            a{
+                text-decoration: none;
+                text-transform: capitalize;
+                color: $brand-mid-gray;
+                font-size: 18px;
+                &:hover{
+                    color: $brand-mid-gray;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+h2.nf-heading-follow{
+    margin-bottom: 25px;
+}
+.follow-us-container{
+    margin-left: auto;
+}
+
+@media only screen and (max-width:767px){
+    .follow-us-container{
+        width: 100%;
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+}

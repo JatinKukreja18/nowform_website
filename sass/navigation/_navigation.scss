@@ -1,0 +1,56 @@
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+@import "links";
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+@import "menus";
+
+
+.nf-header{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 0 80px;
+}
+
+.brand-ball{
+        width: 9px;
+        height: 9px;
+        background: $brand-main;
+        display: inline-block;
+        border-radius: 50%;
+}
+.nf-logo{
+        display: flex;
+        position: relative;
+        align-items: flex-end;
+}
+.nf-logo img{
+        height: 30px;
+        margin: 0 5px;
+}
+.nf-navigation{
+        width: auto;
+
+        li{
+                padding: 0 17px;
+                &.current-menu-item{
+                        a{
+                        text-decoration: underline;                                
+                        }
+                }
+        }
+        a{
+                font-family: $font_main_2;
+                font-size: 18px;
+                color: $brand-mid-gray;
+                &:hover{
+                        text-decoration: underline;
+                }
+        }
+}

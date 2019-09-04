@@ -1,0 +1,132 @@
+// interior  work
+
+.featured-image{
+    width: 100%;
+    margin: 50px 0;
+}
+.project-industry{
+    font-family: $font_main_1;
+}
+.project-breif,.project-breif p{ 
+    font-weight: 700;
+    font-family: $font_main_1;
+    font-size: 25px;
+    color: #000;    
+    
+}
+*::selection{
+    background: $brand-yellow;
+}
+.interior-work{
+    h1{
+        font-size: 40px;
+    }
+    h2,h3,h4,h5,h6{
+        font-size: 25px;
+        margin-bottom: 25px; 
+    }
+    p{
+        font-size: 18px;
+    }
+    img{
+        margin: 50px 0;
+        width: 100%;
+    }
+    .wp-caption{
+        margin: 0;
+        img{
+            margin-bottom: 10px;
+        }
+        .wp-caption-text{
+            text-align: left;
+            font-style: italic;
+            margin: 0 0 50px 0;
+        }
+    }
+    blockquote{
+        margin: 25px 0;
+        font-weight: 700;
+        color: #000;
+        font-family: $font_main_1;
+        p{
+            font-weight: 700;
+            color: #000;
+            font-family: $font_main_1;
+            font-size: 25px;
+        }
+    }   
+
+    // gallery as slider
+    .gallery{
+        display: flex;
+        overflow: hidden;
+        overflow-x: visible;
+        position: relative;
+        figure{
+            min-width: 100%;
+            margin: 0;
+            img{
+                height: auto;
+                margin: 0;
+            }
+        }
+        .nf-slider-navigation{
+            position: absolute;
+            height: 50px;
+            width: 100%;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            justify-content: space-between;
+            display: flex;
+            .nf-slider-left,.nf-slider-right{
+                width: 50px;
+                height: 50px;
+                background: #000000;
+                display: inline-block;
+                position: relative;
+            }
+            .nf-slider-left:before{
+                content:'';
+                border-right: 14px solid #fff;
+                border-top: 12px solid transparent;
+                border-bottom:12px solid transparent;
+                width: 0px;
+                height: 0px;
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .nf-slider-right:before{
+                content:'';
+                border-left: 14px solid #fff;
+                border-top: 12px solid transparent;
+                border-bottom:12px solid transparent;
+                width: 0px;
+                height: 0px;
+                display: inline-block;
+                position: absolute;
+                right: 50%;
+                top: 50%;
+                transform: translate(50%, -50%);
+            }
+        }
+    }
+    // videos
+    iframe,video{
+        margin: 50px 0;
+    }
+    
+}
+.team-card-list{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.team-title{
+    margin-bottom: 25px;
+}

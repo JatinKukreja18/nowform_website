@@ -1,0 +1,99 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+*{
+  box-sizing: border-box;
+}
+.nf-container {
+  max-width: 1280px;
+}
+.nf-wrapper {
+  padding: 0 80px;
+}
+.spaced-conatiner {
+  margin-top: 50px;
+}
+
+body {
+  font-family: $font_main_2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #7c7c7c;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  margin: 0;
+  font-family: $font_main_1;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+h1.nf-heading{
+  font-size: 40px;
+  font-weight: 700;
+  &.white{
+    color: #fff;
+  }
+}
+h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+h2.nf-heading{
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  &.white{
+    color: #fff;
+  }
+}
+p {
+  margin: 0;
+  font-family: Georgia;
+  font-size: 18px;
+  color: $brand-gray;
+}
+h3 {
+  font-weight: 400;
+  font-size: 18px;
+  color: $brand-gray;
+}
+.black-section{
+  padding-top: 50px;
+  padding-bottom: 0px;
+  background: #000000;
+}
+@media only screen and (max-width:767px){
+  .nf-wrapper{
+    padding: 0 20px;
+  }
+}
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";
+@import "components/components";
+
+@import "pages/pages";
+@import "footer/footer";

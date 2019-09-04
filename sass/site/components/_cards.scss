@@ -1,0 +1,87 @@
+.nf-work-card{
+    margin-bottom: 50px;
+}
+.nf-work-card a{
+    display: block;
+    position: relative;
+    font-size: 0;
+    &:after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        transition: .3s;
+    }
+    &:hover::after{
+
+        opacity: 1;
+    }
+}
+.nf-work-card .work-title{
+    margin-bottom: 10px;
+}
+.nf-work-card .work-summary{
+}
+.nf-work-card img {
+    width: 100%;
+    // height: 420px;
+}
+
+
+.nf-member-info{
+    background: #000;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .member-name{
+        color: #fff;
+        margin-bottom: 5px;
+    }
+    .member-designation{
+        color: #fff;
+        margin-bottom: 25px;
+    }
+    .member-info{
+        color: #fff;
+        white-space: pre-wrap;
+        white-space: pre-line;
+    }
+}
+.member-work-title{
+    margin-bottom: 25px;
+}
+
+
+
+// used in interior pages
+.team-card{
+    width: 100%;
+    margin-bottom: 50px;
+    img{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    h2,a{
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-family: $font_main_1;
+        font-weight: 700;
+        display: block;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    p{
+        color: #fff;
+    }
+    .role{
+        margin-bottom: 0;
+        color: #fff;
+    }
+}

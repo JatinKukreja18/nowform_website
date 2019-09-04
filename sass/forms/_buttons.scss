@@ -1,0 +1,18 @@
+
+
+
+.nf-button{
+	font-family: $font_main_1;
+	font-size: 25px;
+	color: #fff;
+	background: $brand-main;
+	padding: 12px;
+	min-width: 197px;
+	line-height: 1;
+	border: none;
+	font-weight: 700;
+	max-width: 200px;
+	&.wide{
+
+	}
+}
