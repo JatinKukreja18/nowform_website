@@ -51,7 +51,8 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation nf-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'nowform-theme' ); ?></button>
+			<a class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" onClick="toggleMenu()">
+			</a>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
@@ -59,6 +60,7 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

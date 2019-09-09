@@ -5,3 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('.gallery').innerHTML +=arrows;
     }
 });
+function toggleMenu(){
+    document.querySelector('.menu-toggle').classList.toggle('active');
+    document.querySelector('.main-navigation').classList.toggle('mobile-active');
+}
