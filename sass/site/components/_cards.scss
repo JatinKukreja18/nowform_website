@@ -26,6 +26,7 @@
     margin-bottom: 10px;
 }
 .nf-work-card .work-summary{
+    font-size: 18px;
 }
 .nf-work-card img {
     width: 100%;
@@ -83,5 +84,36 @@
     .role{
         margin-bottom: 0;
         color: #fff;
+    }
+}
+.category{
+    font-family: $font_main_1;
+    // margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    // margin-top: 25px;
+    display: inline-block;
+    min-height: 20px;
+}
+.nf-work-card a{
+    margin-bottom: 25px;
+}
+@media only screen and (max-width: 767px){
+    .nf-work-card{
+        margin-bottom: 30px;
+    }
+    .nf-work-card .work-summary{
+        font-size: 12px;
+    }
+    .nf-work-card .work-title{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .nf-work-card a{
+        margin-bottom: 20px;
+    }
+    .category{
+        font-size: 10px;
+        min-height: 10px;
     }
 }

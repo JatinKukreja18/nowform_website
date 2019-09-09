@@ -49,3 +49,9 @@ textarea {
 .nf-input::placeholder{
 	color: $brand-mid-gray;
 }
+@media only screen and (max-width:767px){
+	.nf-input{
+		min-height: 38px;
+		font-size: 15px;
+	}
+}

@@ -16,13 +16,13 @@
 
 @media only screen and (max-width:767px){
     .subscription-form{
-        flex-direction: column;
-        align-items: stretch;
+        
         .nf-input{
-            margin-bottom: 20px;
+            margin-right: 20px;
         }
         .nf-button{
             margin: 0;
+            min-width: 100px;
         }
     }
 }

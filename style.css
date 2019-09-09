@@ -363,6 +363,9 @@ template {
   font-weight: 700;
   max-width: 200px; }
 
+@media only screen and (max-width: 767px) {
+  .nf-button {
+    font-size: 15px; } }
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -424,6 +427,10 @@ textarea {
 .nf-input::placeholder {
   color: #7c7c7c; }
 
+@media only screen and (max-width: 767px) {
+  .nf-input {
+    min-height: 38px;
+    font-size: 15px; } }
 .subscription-form {
   display: flex;
   align-items: flex-end; }
@@ -433,13 +440,11 @@ textarea {
     margin-left: 20px; }
 
 @media only screen and (max-width: 767px) {
-  .subscription-form {
-    flex-direction: column;
-    align-items: stretch; }
-    .subscription-form .nf-input {
-      margin-bottom: 20px; }
-    .subscription-form .nf-button {
-      margin: 0; } }
+  .subscription-form .nf-input {
+    margin-right: 20px; }
+  .subscription-form .nf-button {
+    margin: 0;
+    min-width: 100px; } }
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -1078,7 +1083,16 @@ h3 {
 
 @media only screen and (max-width: 767px) {
   .nf-wrapper {
-    padding: 0 20px; } }
+    padding: 0 20px; }
+
+  p {
+    font-size: 12px; }
+
+  h1 {
+    font-size: 20px; }
+
+  h2.nf-heading {
+    font-size: 15px; } }
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -1125,6 +1139,9 @@ h3 {
 .nf-work-card .work-title {
   margin-bottom: 10px; }
 
+.nf-work-card .work-summary {
+  font-size: 18px; }
+
 .nf-work-card img {
   width: 100%; }
 
@@ -1170,13 +1187,31 @@ h3 {
 
 .category {
   font-family: "nimbus-sans", sans-serif;
-  margin-bottom: 10px;
   font-size: 18px;
   text-transform: capitalize;
-  margin-top: 25px;
   display: inline-block;
   min-height: 20px; }
 
+.nf-work-card a {
+  margin-bottom: 25px; }
+
+@media only screen and (max-width: 767px) {
+  .nf-work-card {
+    margin-bottom: 30px; }
+
+  .nf-work-card .work-summary {
+    font-size: 12px; }
+
+  .nf-work-card .work-title {
+    font-size: 20px;
+    margin-bottom: 5px; }
+
+  .nf-work-card a {
+    margin-bottom: 20px; }
+
+  .category {
+    font-size: 10px;
+    min-height: 10px; } }
 .special-link {
   margin-right: 125px;
   font-size: 25px;
@@ -1218,6 +1253,9 @@ h3 {
 .redirect-links {
   margin: 30px 0 50px 0; }
 
+@media only screen and (max-width: 767px) {
+  .special-link {
+    font-size: 15px; } }
 .featured-image {
   width: 100%;
   margin: 50px 0; }
@@ -1359,8 +1397,13 @@ h2.nf-heading-follow {
 @media only screen and (max-width: 767px) {
   .follow-us-container {
     width: 100%;
-    margin-top: 50px;
-    padding: 0 10px; } }
+    margin-top: 30px;
+    padding: 0 10px; }
+
+  .menu-follow-us-container ul li {
+    flex: none; }
+    .menu-follow-us-container ul li a {
+      font-size: 12px; } }
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
