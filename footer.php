@@ -36,6 +36,7 @@
 			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+	<div class="nf-gallery-modal"></div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
