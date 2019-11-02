@@ -1,3 +1,21 @@
+
+function getHours(hrs){
+    if((hrs % 12 ) >0){
+        return hrs % 12
+    }else{
+        return 12
+    }
+}
+function getMinutes(min){
+    if(min.length != 2){
+        return "0" + min
+    }else{
+        return min
+    }
+}
+function loadPage(){
+    document.querySelector('.nf-logo').classList.add('loading')
+}
 function restructureGallery(){
     if(document.querySelectorAll('.gallery') && document.querySelectorAll('.gallery').length > 0 ){
         
@@ -50,6 +68,29 @@ function closeModal(el){
 }
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
+    
+    if(document.querySelector('#india-time')){
+        var currentTime = new Date();
+    
+        var currentOffset = currentTime.getTimezoneOffset();
+    
+        var ISTOffset = 330;   // IST offset UTC +5:30 
+    
+        var ISTTime = new Date(currentTime.getTime() + (ISTOffset + currentOffset)*60000);
+    
+        // ISTTime now represents the time in IST coordinates
+    
+        var hoursIST = ISTTime.getHours()
+        var minutesIST = ISTTime.getMinutes()
+        document.querySelector('#india-time').innerHTML(getHours(hoursIST)  + ":" + getMinutes(minutesIST) )
+    }
+    
+    // for about page
+            if(document.querySelector('.about')){
+                document.querySelector('.about-arrow').classList.add('active')
+            }
+
+    // for work page
     restructureGallery();
 });
 

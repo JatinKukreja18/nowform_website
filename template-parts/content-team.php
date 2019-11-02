@@ -14,9 +14,9 @@
 		<div class="nf-wrapper">
 			<div class="row">
 				<div class="col-md-3">
-					<img class="work-image" src="<?php echo get_the_post_thumbnail_url() ?>" alt="">			
+					<img class="team-member-image" src="<?php echo get_the_post_thumbnail_url() ?>" alt="">			
 				</div>
-				<div class="col-md-7 offset-2">
+				<div class="col-md-7 col-lg-7 offset-lg-2">
 					<h1 class="member-name"><?php echo get_the_title()?></h1>
 					<p class="member-designation">Founder</p>
 					<p class="member-info">

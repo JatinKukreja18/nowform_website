@@ -1,0 +1,118 @@
+.about-top{
+    padding-bottom: 80px;
+}
+.block-with-arrow{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.block-with-arrow a {
+    flex: 1;
+}
+
+.about-arrow{
+    position: relative;
+    
+    &:before{
+        position: absolute;
+        content: "";
+    transition: 1s;
+    transition-delay: .5s;
+    width: 0;
+        height: 0;
+        border-left: 10px solid #000;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+        top: calc(50% - 4px);
+        left: 72px;
+    }
+    &:after{
+        position: absolute;
+        content: "";
+    transition: 1s;
+    width: 60px;
+        background: #000;
+    transition-delay: .5s;
+    height: 1px;
+        
+        top: 50%;
+        left: 20px;    
+    }
+    &.active{
+        &:after{
+            width: 60px;
+        width: calc(100% - 40px);
+
+        }
+        &::before{
+            left: calc(100% - 22px);
+        }
+    }
+}
+.process-section a,
+.process-section .nf-heading{
+    color: #fff;
+}
+.process-image{
+    width: 100%;
+}
+.process-link{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+.process-titles{
+    display: flex;
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .process-title{
+        background: $brand-black;
+        margin: 0;
+        z-index: 1;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &:first-child{
+            padding-left: 0;
+        }
+
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: calc(100% - 20px);
+        background: #fff;
+        top: 50%;
+        left: 10px;
+        z-index: 0;
+        transform: translateY(-50%);
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .process-section .process-title{
+        font-size: 20px;
+        margin: 20px 0 6px 0;
+    }
+    .process-section .process-link{
+        font-size: 15px;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+    .about-top {
+        padding-bottom: 50px;
+        .nf-heading{
+        font-size: 20px;
+    }}
+    .block-with-arrow{
+        margin-bottom: 20px;
+    }
+}

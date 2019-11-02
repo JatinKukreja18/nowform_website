@@ -8,7 +8,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main spaced-container">
+		<main id="main" class="site-main spaced-container-150">
 
 		<?php
 		while ( have_posts() ) :

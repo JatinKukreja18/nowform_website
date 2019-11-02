@@ -13,9 +13,9 @@
         height: 100px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         background: #fff;
-        padding: 0 80px;
+        padding: 0 80px 24px 80px;
         position: fixed;
         top: 0;
         width: 100%;
@@ -32,19 +32,21 @@
 top: 0px;
 transition: .8s;
 }
-.brand-ball{
-        width: 9px;
-        height: 9px;
-        background: $brand-main;
-        display: inline-block;
-        border-radius: 50%;
+.nf-logo.loading{
+        .brand-ball{
+                animation: jump .8s ease-in infinite;
+        }
 }
+.brand-ball{
+        animation: none;;
+}
+
 .nf-logo{
         display: flex;
         position: relative;
         align-items: flex-end;
 }
-.nf-logo img{
+.nf-logo svg{
         height: 30px;
         margin: 0 5px;
 }
@@ -59,7 +61,7 @@ transition: .8s;
                         }
                 }
         }
-        a{
+        .menu a{
                 font-family: $font_main_1;
                 font-size: 18px;
                 color: #000000;
@@ -83,13 +85,42 @@ transition: .8s;
         }
 }
 
-
-@media only screen and (max-width:767px){
+@keyframes jump{
+        0% {
+                transform: translateY(0) scale(1, 0.8);
+            }
+            
+            20% {
+                transform: translateY(-2px) scaleY(1.1);
+            }
+            50% {
+                transform: translateY(-4px) scale(1);
+            }
+            80% {
+                transform: translateY(-2px) scale(1);
+            }
+            100% {
+                transform: translateY(0) scale(1, 0.8);
+            }
+}
+@media only screen and (max-width: $screen-md-max){
         .nf-header{
-                padding: 30px 20px;
+                padding: 0px 30px;
                 display: flex;
+                height: 60px;
+                align-items: center;
                 &.scrolled{
-                        padding: 30px 30px;
+                        height: 60px;
+                        padding: 0px 30px;
+                        .main-navigation a.menu-toggle{
+                                top: -100px;
+                        }
+                        &.slide{
+                                .main-navigation a.menu-toggle{
+                                        top: 24px;
+                                        transition-delay: .2s;
+                                }    
+                        }
                 }
                 .main-navigation{
                         margin-left: auto;
@@ -105,21 +136,21 @@ transition: .8s;
                                 /* background: black; */
                                 width: 17px;
                                 height: 15px;
-                                border-bottom: 1px solid #707070;
-                                border-top: 1px solid #707070;
+                                border-bottom: 1px solid #000;
+                                border-top: 1px solid #000;
                                 margin-left: auto;
                                 cursor: pointer;
                                 position: relative;
                                 transition: .3s;
                                 position: fixed;
-                                top: 34px;
-                                right: 20px;
+                                top: 24px;
+                                right: 30px;
                                 &::before,&::after{
                                         content: '';
                                         width: 100%;
                                         height: 1px;
                                         position: absolute;
-                                        background: #707070;
+                                        background: #000;
                                         top: 6px;
                                         transition: .3s;
                                 }
@@ -144,11 +175,12 @@ transition: .8s;
                 flex-direction: column;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                 z-index: 5;
-
+                padding: 30px;
                 li{
                         margin-bottom: 30px;
+                        padding: 0;
                 }
                 ul{
                         height: 100%;
@@ -157,7 +189,7 @@ transition: .8s;
                         flex-direction: column;
                         display: flex;
                         justify-content: center;
-                        align-items: center;
+                        align-items: flex-start;
                 }
         }
 }

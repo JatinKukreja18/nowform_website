@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area spaced-container nf-wrapper">
+	<div id="primary" class="content-area spaced-container-150 home nf-wrapper">
 		<main id="main" class="site-main">
 			
 		<?php 
@@ -59,7 +59,8 @@ get_header();
 					<?php wp_reset_query(); ?>
 			</div>
 			<div class="row redirect-links">
-				<a href="./work" class="special-link">View all work</a>
+				<a href="./work" class="special-link">
+				View all work</a>
 				<a href="./journal" class="special-link">View journal</a>
 			</div>
 		</main><!-- #main -->

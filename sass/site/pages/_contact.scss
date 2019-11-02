@@ -1,0 +1,29 @@
+.contact-page{
+    .mobile > a,.email > a{
+        color: #000;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .mobile{
+        margin-bottom: 50px;
+    }
+    .address{
+        white-space: pre-line;
+        font-size: 25px;
+        color: #000;
+        margin-bottom: 25px;
+    }
+    .directions a{
+        color: #000;
+        text-decoration: none;
+        font-size: 18px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+.contact-image{
+    margin-top: 0;
+}

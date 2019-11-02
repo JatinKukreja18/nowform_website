@@ -38,6 +38,7 @@
     background: #000;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-bottom: 50px;
     .member-name{
         color: #fff;
         margin-bottom: 5px;
@@ -116,4 +117,19 @@
         font-size: 10px;
         min-height: 10px;
     }
+    .team-card {
+        margin-bottom: 20px;
+        a,h2{
+            font-size: 15px;
+            margin: 0;
+        }
+        .role{
+            font-size: 12px;
+        }
+    }
+    .nf-member-info{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
 }

@@ -30,6 +30,8 @@
     }
     img{
         margin: 50px 0;
+
+        height: auto;
         width: 100%;
     }
     .wp-caption{
@@ -265,5 +267,58 @@
         cursor: pointer;
     }
 }
-
-// @media only 
+.related-projects{
+    margin: 50px 0px 25px 0;
+}
+@media only screen and (max-width: 767px){
+    .nf-heading.work-title{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .project-industry{
+        font-size: 10px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .project-breif p{
+        font-size: 15px;
+    }
+    .featured-image{
+        margin: 20px 0; 
+    }
+    .interior-work{
+        h1{
+            font-size: 40px;
+        }
+        h2,h3,h4,h5,h6{
+            font-size: 15px;
+            margin-bottom: 7px; 
+        }
+        p{
+            font-size: 12px;
+        }
+        img{
+        margin: 20px 0;             
+        }
+       .wp-caption .wp-caption-text{
+           font-size: 10px;
+           margin: 0 0 20px 0;
+       }
+       blockquote {
+           margin: 20px 0;
+           p{
+            font-size: 15px;
+            }
+        }
+        .gallery-wrapper,.embed-container{
+            margin: 20px 0;
+        }
+        .gallery-wrapper{
+            margin: 20px 0 36px 0;
+        }
+    }
+    .nf-heading.team-title{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}

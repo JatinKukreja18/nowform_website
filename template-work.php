@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area spaced-container nf-wrapper">
+	<div id="primary" class="content-area spaced-container-150 nf-wrapper">
 		<main id="main" class="site-main">
 			
 		<?php 
