@@ -61,6 +61,20 @@
     margin-top: 10px;
     margin-bottom: 50px;
     display: inline-block;
+    font-family: $font_main_1;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+    position: relative;
+    &:hover .special-arrow{
+      
+        &:after{
+            width: 60px;
+        }
+        &::before{
+            transform: translateX(10px);
+        }
+    }
 }
 .process-titles{
     display: flex;
@@ -85,6 +99,7 @@
     }
 
     &:before{
+        
         content: '';
         position: absolute;
         height: 1px;

@@ -28,7 +28,11 @@ get_header();
 							<a href="<?php the_permalink(); ?>">
 								<img  src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">	
 							</a>			
-							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							<a href="<?php the_permalink(); ?>">
+								<span>
+									<?php the_title(); ?>
+								</span>
+							</a>
 							
 							<span class="role"><?php echo get_field('designation')[0] ?></span>
  

@@ -17,6 +17,7 @@ get_header();
 			'post_type' => 'work',
 			'orderby' =>'menu_order',
 			'category_name'=>'work',
+			"posts_per_page"=>"2"
 			);
 			$the_query = new WP_Query( $args );
 			?>
@@ -50,6 +51,11 @@ get_header();
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+			<?php
+					if (  $the_query->max_num_pages > 1 )
+					echo '<div class="nf-work-loadmore"><h2>Load More</h2></div>'; // you can use <a> as well
+				
+			?>
 
 <?php
 get_footer();

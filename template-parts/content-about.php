@@ -37,25 +37,41 @@
 					</div>
 					<div class="row">
 						<div class="col-md-4">
-							<img class="process-image" src="<?php echo  $process1['process_image']?>" alt="" srcset="">
+							<a href="<?php echo  $process1['process_link']?>" >
+								<img class="process-image" src="<?php echo  $process1['process_image']?>" alt="" srcset="">
+							</a>
 							<h2 class="nf-heading process-title visible-xs">
 									<?php echo  $process1['process_name']?>
 							</h2>
-							<a href="<?php echo  $process1['process_link']?>" class="process-link white special-link"><?php echo  $process1['link_text']?></a>
+							<a href="<?php echo  $process1['process_link']?>" class="process-link white ">
+								<?php echo  $process1['link_text']?>
+								<span class="special-arrow"></span>
+							</a>
 						</div>
 						<div class="col-md-4">
+						<a href="<?php echo  $process2['process_link']?>" >
 							<img class="process-image" src="<?php echo  $process2['process_image']?>" alt="" srcset="">
+						</a>
 							<h2 class="nf-heading process-title visible-xs">
 									<?php echo  $process2['process_name']?>
 							</h2>
-							<a href="<?php echo  $process2['process_link']?>" class="process-link white special-link"><?php echo  $process2['link_text']?></a>
+							<a href="<?php echo  $process2['process_link']?>" class="process-link white ">
+								<?php echo  $process2['link_text']?>
+								<span class="special-arrow"></span>
+							</a>
 						</div>
 						<div class="col-md-4">
+						<a href="<?php echo  $process3['process_link']?>" >
 							<img class="process-image" src="<?php echo  $process3['process_image']?>" alt="" srcset="">
+						</a>
+
 							<h2 class="nf-heading process-title visible-xs">
 									<?php echo  $process3['process_name']?>
 							</h2>
-							<a href="<?php echo  $process3['process_link']?>" class="process-link white special-link"><?php echo  $process3['link_text']?></a>
+							<a href="<?php echo  $process3['process_link']?>" class="process-link white">
+								<?php echo  $process3['link_text']?>
+								<span class="special-arrow"></span>
+							</a>
 						</div>
 					</div>
 					<?php endif; ?>

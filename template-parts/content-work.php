@@ -59,7 +59,7 @@
 					<li class="col-md-3 col-sm-6 team-card">
 						<a href="<?php the_permalink(); ?>">
 								<img  src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">				
-							<?php the_title(); ?>
+							<span>	<?php the_title(); ?></span>
 						</a>
 						
 						<span class="role"><?php echo get_field('designation')[0] ?></span>
@@ -82,7 +82,7 @@
 						<ul class="team-card-list row">
 						<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 							<?php setup_postdata($post); ?>
-							<li class="team-card col-md-4">
+							<li class="team-card col-md-3">
 								<h2><?php the_title(); ?></h2>
 								<span class="role"><?php echo get_field('designation')[0] ?></span>
 							</li>

@@ -1,5 +1,21 @@
 // interior  work
 
+.nf-work-loadmore{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid $brand-light-gray;
+    border-bottom: none;
+    h2{
+        cursor: pointer;
+        height: 100%;
+        margin: 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 .featured-image{
     width: 100%;
     margin: 50px 0;
@@ -320,5 +336,17 @@
     .nf-heading.team-title{
         font-size: 20px;
         margin-bottom: 20px;
+    }
+
+    .interior-work .gallery-wrapper .nf-slider-navigation .nf-slider-left{
+        transform: scale(0.4);
+        transform-origin: left;
+    }
+    .interior-work .gallery-wrapper .nf-slider-navigation .nf-slider-right{
+        transform-origin: right;
+        transform: scale(0.4);
+    }
+    .interior-work .gallery-wrapper .nf-slider-navigation{
+        top:calc(50%  - 10px)
     }
 }

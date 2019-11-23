@@ -30,6 +30,7 @@
 }
 .nf-work-card img {
     width: 100%;
+    background: #ccc;
     // height: 420px;
 }
 
@@ -76,7 +77,7 @@
         font-weight: 700;
         display: block;
     }
-    a:hover{
+    a span:hover  {
         text-decoration: underline;
     }
     p{

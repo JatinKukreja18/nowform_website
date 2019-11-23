@@ -33,12 +33,24 @@
 					?>	
 				</p>
 				<p class="directions">
-					<a href="<?php echo get_field('get_directions_link'); ?>">Get Directions</a>
+					<a href="<?php echo get_field('get_directions_link'); ?>">
+						Get Directions
+						<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+							<g fill="none" fill-rule="evenodd" stroke="#000">
+								<path d="M11.7 11.05V1.3H1.95M11.7 1.3L1.3 11.7"/>
+							</g>
+						</svg>
+					</a>
 				</p>
 			</div> 
-			<div class="col-md-2">
-				<span id="india-time"></span>
-				IST
+			<div class="col-md-3 col-lg-2">
+				<h1 class="nf-heading ">
+				India (IST)
+				</h1>
+				<h1 class="nf-heading ">
+
+					<span id="india-time"></span>
+				</h1>			
 			</div>
 
 		</div>

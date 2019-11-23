@@ -1,4 +1,5 @@
 .contact-page{
+    padding-bottom: 50px;
     .mobile > a,.email > a{
         color: #000;
         text-decoration: none;
@@ -19,8 +20,15 @@
         color: #000;
         text-decoration: none;
         font-size: 18px;
+        svg{
+            transition: .3s;
+        }
         &:hover{
-            text-decoration: underline;
+            // text-decoration: underline;
+            
+            svg{
+                transform: translate(2px, -2px);
+            }
         }
     }
 }

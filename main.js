@@ -82,7 +82,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
         var hoursIST = ISTTime.getHours()
         var minutesIST = ISTTime.getMinutes()
-        document.querySelector('#india-time').innerHTML(getHours(hoursIST)  + ":" + getMinutes(minutesIST) )
+        
+
+        var timeString = hoursIST + ":" + minutesIST + ':00';
+        console.log(timeString);
+        console.log(getMinutes(minutesIST));
+        var H = +timeString.substr(0, 2);
+        var h = H % 12 || 12;
+        var ampm = (H < 12 || H === 24) ? " am" : " pm";
+        timeString = h + timeString.substr(2, 3) + ampm;
+        console.log(timeString);
+        
+        console.log(getHours(hoursIST)  + ":" + getMinutes(minutesIST));
+        
+        document.querySelector('#india-time').innerHTML = timeString;
     }
     
     // for about page
@@ -119,4 +132,5 @@ window.addEventListener('scroll', (event) => {
 function toggleMenu(){
     document.querySelector('.menu-toggle').classList.toggle('active');
     document.querySelector('.main-navigation').classList.toggle('mobile-active');
+    document.querySelector('body').classList.toggle('noScroll');
 }
