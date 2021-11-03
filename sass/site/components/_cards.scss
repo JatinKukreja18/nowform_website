@@ -1,10 +1,14 @@
 .nf-work-card{
     margin-bottom: 50px;
 }
-.nf-work-card a{
+.nf-work-card .image-wrapper{
     display: block;
     position: relative;
     font-size: 0;
+    margin-bottom: 25px;
+    padding-bottom: 66.7%;
+    // background: #ccc;
+    overflow: hidden;
     &:after{
         content: '';
         width: 100%;
@@ -22,6 +26,14 @@
         opacity: 1;
     }
 }
+
+.nf-work-card a{
+    text-decoration: none;
+    &:hover{
+        color: #000;
+        // text-decoration: underline;
+    }
+}
 .nf-work-card .work-title{
     margin-bottom: 10px;
 }
@@ -30,11 +42,36 @@
 }
 .nf-work-card img {
     width: 100%;
-    background: #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
     // height: 420px;
+    transition: 1s;
+    transition-delay: .5s;
+    transform: translateY(20px);
+    background: #ccc;
+    opacity: 0;
+}
+.nf-work-card img.lazyloaded{
+    opacity: 1;
+    transform: translateY(0px);
 }
 
+.nf-work-card img.blurred{
+    filter: blur(2px);
+}
+.nf-work-hover-block:hover{
 
+    a.image-wrapper{
+        &::after{
+    
+            opacity: 1;
+        }
+    }
+    
+}
 .nf-member-info{
     background: #000;
     padding-top: 50px;
@@ -50,8 +87,14 @@
     }
     .member-info{
         color: #fff;
-        white-space: pre-wrap;
-        white-space: pre-line;
+        // white-space: pre-wrap;
+        // white-space: pre-line;
+        a:hover,a:visited,a{
+            color: #fff;
+        }
+        span{
+            line-height: 1.5;
+        }
     }
 }
 .member-work-title{
@@ -67,6 +110,12 @@
     img{
         width: 100%;
         margin-bottom: 25px;
+        opacity: 0;
+            transition: .5s;
+            // transition-delay: 3s;
+            &.lazyloaded{
+                opacity: 1;
+            }
     }
     h2,a{
         text-decoration: none;
@@ -97,35 +146,42 @@
     display: inline-block;
     min-height: 20px;
 }
-.nf-work-card a{
-    margin-bottom: 25px;
-}
+// .nf-work-card a{
+//     margin-bottom: 25px;
+// }
 @media only screen and (max-width: 767px){
     .nf-work-card{
-        margin-bottom: 30px;
+        margin-bottom: 35px;
+        .image-wrapper{
+            margin-bottom:10px;
+        }
     }
     .nf-work-card .work-summary{
-        font-size: 12px;
+        font-size: 14px;
     }
     .nf-work-card .work-title{
-        font-size: 20px;
+        // font-size: 20px;
         margin-bottom: 5px;
     }
     .nf-work-card a{
         margin-bottom: 20px;
     }
     .category{
-        font-size: 10px;
+        font-size: 16px;
         min-height: 10px;
     }
     .team-card {
         margin-bottom: 20px;
+        img{
+            margin-bottom: 10px;
+            
+        }
         a,h2{
-            font-size: 15px;
+            font-size: 20px;
             margin: 0;
         }
         .role{
-            font-size: 12px;
+            font-size: 14px;
         }
     }
     .nf-member-info{

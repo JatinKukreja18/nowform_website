@@ -36,7 +36,10 @@
 			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-	<div class="nf-gallery-modal"></div>
+	<div class="nf-gallery-modal">
+		<a class="nf-modal-cross" onClick="closeModal()"></a>
+		<div class="nf-gallery-modal-body"></div>
+	</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

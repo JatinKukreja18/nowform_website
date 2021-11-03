@@ -26,14 +26,9 @@
 						<?php echo get_field('mobile');?>
 					</a>
 				</h1>
-				<p class="address">
-					<?php
-						$address	=get_field('address');
-						echo $address;
-					?>	
-				</p>
+				<p class="address"><?php echo get_field('address');?></p>
 				<p class="directions">
-					<a href="<?php echo get_field('get_directions_link'); ?>">
+					<a href="<?php echo get_field('get_directions_link'); ?>" target="_blank">
 						Get Directions
 						<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
 							<g fill="none" fill-rule="evenodd" stroke="#000">

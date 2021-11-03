@@ -16,9 +16,9 @@
 				<div class="col-md-3">
 					<img class="team-member-image" src="<?php echo get_the_post_thumbnail_url() ?>" alt="">			
 				</div>
-				<div class="col-md-7 col-lg-7 offset-lg-2">
+				<div class="col-md-8 col-lg-8 offset-lg-1">
 					<h1 class="member-name"><?php echo get_the_title()?></h1>
-					<p class="member-designation">Founder</p>
+					<p class="member-designation"><?php echo get_field('designation')[0] ?></p>
 					<p class="member-info">
 						<?php echo get_the_content()?>	
 					</p>
@@ -35,6 +35,7 @@
 	<?php
 		$projects = get_posts(array(
 			'post_type' => 'work',
+			'numberposts'=> '99',
 			'meta_query' => array(
 				array(
 					'key' => 'team_member', // name of custom field
@@ -45,21 +46,26 @@
 		));
 	?>
 			<div class="row">
+		<?php if ($projects): ?>
 				<div class="col-sm-12">
 					<h2 class="member-work-title"><?php echo get_the_title()?>'s Recent Work</h2>
 				</div>
-		<?php if ($projects): ?>
 				<?php foreach ($projects as $project): ?>
 					<div class="col-md-6">
 						<div class="nf-work-card">
-							<a href="<?php echo get_the_permalink($project->ID); ?>"?>
-							<img class="work-image" src="<?php echo get_the_post_thumbnail_url($project->ID); ?>" alt="">
+							<div class="nf-work-hover-block">
+
+							<a class="image-wrapper" href="<?php echo get_the_permalink($project->ID); ?>"?>
+								<img class="work-image" src="<?php echo get_the_post_thumbnail_url($project->ID); ?>" alt="">
 							</a>
-							<h1 class="work-title">
-								<?php
-								echo get_the_title($project->ID);
-								?>
-							</h1>
+							<a href="<?php echo get_the_permalink($project->ID); ?>"?>
+								<h1 class="work-title">
+									<?php
+									echo get_the_title($project->ID);
+									?>
+								</h1>
+							</a>
+							</div>
 							<p class="work-summary">
 									<?php echo $project->post_excerpt?>	
 						</div><!-- .entry-content -->

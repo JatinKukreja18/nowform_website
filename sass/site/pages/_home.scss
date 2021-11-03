@@ -1,4 +1,21 @@
-
+.home{
+    overflow-x: hidden;
+    .nf-header:not(.scrolled){
+        background: transparent;
+        .menu a{
+            color: inherit;
+        }
+        .nf-branding{
+            color: #000;
+            a,svg{
+                color: inherit;
+            }
+        }
+    }
+}
+.home-banner img{
+    transform: translateY(0px);
+}
 .special-link{
     margin-right: 125px;
     font-size: 25px;
@@ -8,6 +25,7 @@
     font-weight: 700;
     transition: .3s;
     position: relative;
+    padding-right: 62px;
     &:last-of-type{
         margin-right: 0;
     }
@@ -24,7 +42,9 @@
     border-bottom: 5px solid transparent;
     border-top: 5px solid transparent;
         top: calc(50% - 4px);
-        left: calc(100% + 62px);    
+        // left: 100%;    
+        right: 0;
+        transform-origin: left;
     }
     &:after{
         position: absolute;
@@ -33,13 +53,15 @@
     width: 50px;
         background: #000;
         height: 1px;
+        transform-origin: left;
         
         top: 50%;
-        left: calc(100% + 20px);    
+        right: 2px;
+        // left: calc(100% + 20px);    
     }
     &:hover{
         &:after{
-            width: 60px;
+            // width: 60px;
         }
         &::before{
             transform: translateX(10px);
@@ -60,10 +82,132 @@
 .redirect-links{
     margin: 30px 0 50px 0;
 }
-
-@media only screen and (max-width:767px){
+// .home-banner{
+//     width: calc(100% + 160px);
+//     max-width: calc(100% + 160px);
+//     margin-left: -80px;
+//     flex: none;
+//     height: calc(100vh - 103px);
+//     margin-top: 104px;
+//     margin-bottom: 50px;
+//     overflow: hidden;
+//     img{
+//         height: 100%;
+//         height: 100%;
+//         padding: 0;
+//         object-fit: cover;
+//     }
+//     article,.nf-work-hover-block,.nf-work-card{
+//         height: 100%;
+//     }
+//     .image-wrapper{
+//         width: 100%;
+//         height: 100%;
+//         padding: 0;
+//     }
+//     .content-wrapper{
+//         position: absolute;
+//         left: 80px;
+//         bottom: 25px;
+//         color: #fff;
+//         width: calc(80% - 160px);
+//         p,h1{
+//             color: #fff;
+//         }
+//     }
+// }
+@media only screen and (min-width: $screen-lg-min){
+    .home-banner{
+        width: calc(100% + 160px);
+        max-width: calc(100% + 160px);
+        margin-left: -80px;
+        flex: none;
+        height: 100vh;
+        margin-top: 0;
+        margin-bottom: 50px;
+        overflow: hidden;
+        img{
+            height: 100%;
+            height: 100%;
+            padding: 0;
+            object-fit: cover;
+        }
+        article,.nf-work-hover-block,.nf-work-card{
+            height: 100%;
+        }
+        .image-wrapper{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+        .content-wrapper{
+            position: absolute;
+            left: 80px;
+            bottom: 50px;
+            color: inherit;
+            width: calc(80% - 160px);
+            a,a:visited,p,h1{
+                color: inherit;
+            }
+        }
+    }
+}
+// @media only screen and (min-width: $screen-md-min) and (max-width:$screen-md-max){
+//     .home-banner{
+//         margin-top: 60px;   
+//         height: calc(100vh - 59px);
+//     }
+//     .home-banner .content-wrapper{
+//         left: 18px;
+//         width: calc(80% - 36px);
+//     }
     
+// }
+@media only screen and (max-width: $screen-md-max){
+    .home-banner{
+        margin-top: 90px; 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .home{
+        overflow-x: hidden;
+        .nf-header:not(.scrolled){
+            background: #fff;
+            .menu a{
+                color: initial;
+            }
+            .nf-branding{
+                color: #000;
+                a,svg{
+                    color: initial;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:$screen-sm-max){
     .special-link{
         font-size: 15px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        &:hover{
+            &:after{
+                width: 50px;
+            }
+            &::before{
+                transform: translateX(0px);
+            }
+        }
+    }
+   
+    
+}
+@media only screen and (max-width:400px){
+    .redirect-links{
+        justify-content: space-between
+        ;
+    }
+    .special-link{
+        margin-right: 10px;
     }
 }

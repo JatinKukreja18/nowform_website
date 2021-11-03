@@ -35,3 +35,20 @@
 .contact-image{
     margin-top: 0;
 }
+@media only screen and (max-width:767px){
+    .contact-page {
+        .address{
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        .mobile{
+            margin-bottom: 10px;
+        }
+        .directions{
+            margin-bottom: 30px;
+            a{
+               font-size: 15px;
+            }
+        }
+    }
+}

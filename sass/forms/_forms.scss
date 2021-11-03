@@ -4,28 +4,57 @@
 
 .subscription-form{
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     .nf-input{
-        flex:1;
+        width: 100%;
         max-width: 413px;
     }
     .nf-button{
         margin-left: 20px;
         max-width: 197px;
         min-width: 157px;
+        outline: none;
     }
-
+    .subscription-input{
+        flex: 1;
+        max-width: 413px;
+    }
+    .subscription-error{
+        display: none;
+        font-size: 12px;
+        margin-top: 10px;
+        color: #de2020;
+        &.active{
+            display: inline-block;
+        }
+      }
 }
 
 @media only screen and (max-width:767px){
     .subscription-form{
         
-        .nf-input{
+        .subscription-input{
             margin-right: 20px;
         }
         .nf-button{
             margin: 0;
             min-width: 100px;
+        }
+    }
+}
+@media only screen and (max-width:380px){
+    .subscription-form {
+        flex-wrap: wrap;
+        .subscription-input{
+            margin-right: 0;
+        }
+        .nf-input{
+            width: 100%;
+            margin: 0 0 15px 0;
+        }
+        .nf-button{
+            width: 100%;
+            max-width: unset;
         }
     }
 }

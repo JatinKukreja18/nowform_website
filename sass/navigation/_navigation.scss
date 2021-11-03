@@ -21,11 +21,12 @@
         width: 100%;
         left: 0;
         z-index: 5;
-        transition: .4s;
+        transition: top .4s, color .4s , background .4s;
 }
 .nf-header.scrolled{
+        transition: top .4s, color .4s .4s, background .4s .4s;
 //     box-shadow: 0 2px 2px #ccc;
-    top: -100px;
+    top: -80px;
     height: 80px;
 }
 .nf-header.scrolled.slide{ 
@@ -48,17 +49,22 @@ transition: .8s;
 }
 .nf-logo svg{
         height: 30px;
-        margin: 0 5px;
+        // margin: 0 5px;
+        transition-delay: .4s;
+
 }
 .nf-navigation{
         width: auto;
-
+        color: #000000;
         li{
                 padding: 0 15px;
                 &.current-menu-item{
                         a::after{ 
                                 transform: scaleX(1);                      
                         }
+                }
+                &:last-child{
+                        padding-right: 0;
                 }
         }
         .menu a{
@@ -67,6 +73,7 @@ transition: .8s;
                 color: #000000;
                 font-weight: 700;
                 position: relative;
+                transition-delay: .4s;
                 &::after{
                         content: '';
                         width:100%;
@@ -84,7 +91,31 @@ transition: .8s;
                 }
         }
 }
-
+.header {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        background-color: #f1f1f1;
+      }
+      
+      /* The progress container (grey background) */
+      .progress-container {
+        width: 100%;
+        height: 4px;
+        background: transparent;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        // transition: .3s;
+      }
+      
+      /* The progress bar (scroll indicator) */
+      .progress-bar {
+        height: 4px;
+        background: $brand-main;
+        width: 0%;
+      }
 @keyframes jump{
         0% {
                 transform: translateY(0) scale(1, 0.8);
@@ -103,19 +134,26 @@ transition: .8s;
                 transform: translateY(0) scale(1, 0.8);
             }
 }
+@media only screen and (max-width: $screen-sm-max){
+        .nf-logo svg{
+                height: 22px;
+                width: auto;
+        }
+}
 @media only screen and (max-width: $screen-md-max){
         .nf-logo svg{
                 // height: 30px;
                 margin: 0px;
         }
         .nf-header{
-                padding: 0px 30px;
+                padding: 0px 18px;
                 display: flex;
                 height: 60px;
                 align-items: center;
                 &.scrolled{
                         height: 60px;
-                        padding: 0px 30px;
+                        top: -60px;
+                        padding: 0px 18px;
                         .main-navigation a.menu-toggle{
                                 top: -100px;
                         }
@@ -158,7 +196,7 @@ transition: .8s;
                                 transition: .3s;
                                 position: fixed;
                                 top: 24px;
-                                right: 30px;
+                                right: 18px;
                                 &::before,&::after{
                                         content: '';
                                         width: 100%;
@@ -195,7 +233,10 @@ transition: .8s;
                 padding-top: 80px;
                 transition:.5s;
                 li{
-                        margin-bottom: 20px;
+                        a{
+                                font-size: 22px;
+                        }
+                        margin-bottom: 30px;
                         padding: 0;
                 }
                 
